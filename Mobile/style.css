@@ -1,0 +1,73 @@
+body {
+    background-image: url(../Mobile/Imagenes/Fondo.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Bangers', cursive;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+#logo {
+    width: 25%;
+    height: 120px;
+}
+
+#location {
+    width: 28px;
+    height: 35px;
+    margin-top: 3px;
+}
+
+#pelota {
+
+    width: 50px;
+    height: 50px;
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+b {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 720px) and (orientation:landscape) {
+    #logo {
+        width: 30%;
+        height: 30%;
+    }
+
+    #allGames {
+        width: 80%;
+        height: 30%;
+
+    }
+
+    #allBody {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

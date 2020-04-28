@@ -1,0 +1,90 @@
+body {
+    background-image: url(../Imagenes/Fondo.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Bangers', cursive;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+#location {
+    width: 28px;
+    height: 35px;
+    margin-top: 3px;
+}
+
+#pelota {
+
+    width: 50px;
+    height: 50px;
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+b {
+    font-size: 40px;
+    color: black;
+    letter-spacing: 4px;
+}
+
+#phone {
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+}
+
+#mail {
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+}
+
+tr,
+td {
+    text-align: center;
+}
+
+table {
+    margin: 0px;
+}
+
+#logo {
+    width: 85%;
+    height: 85%;
+    margin-bottom: -50px;
+    margin-top: 10px;
+}
+
+@media (min-width: 300px) and (orientation: portrait) {
+    h1 {
+        font-size: 30px;
+    }
+
+    #logo {
+        height: 80px;
+        width: 100%;
+        max-width: 300px;
+    }
+}

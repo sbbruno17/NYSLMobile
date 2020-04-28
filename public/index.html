@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>GAMEINFO</title>
+</head>
+
+<body>
+    <div class='container' id="app">
+        <div id='allBody'>
+            <div class='row justify-content-center'>
+                <div class='col-3 col-md-3 mb-4'>
+                    <img id="logo" src='Imagenes/nysl_logo.png' alt='nysl logo'>
+                </div>
+            </div>
+            <div class='row mb-4'>
+
+            </div>
+            <header>
+                <h1>Northside Youth Soccer League</h1>
+            </header>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <b>Events</b><img src="Imagenes/Pelota.png" id='pelota'></img>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p><b>August 4</b><br>
+                                NYSL Fundraiser</p>
+                            <p><b>August 16</b><br>
+                                Season Kick-off: Meet the Teams</p>
+                            <p><b>September 1</b><br>
+                                First Game of the Season (Check <a href="#multiCollapseExample1" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
+                                    class="btn btn-link">Game Info</a> for details)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header " id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <b>Game Info</b><img src="Imagenes/Pelota.png" id='pelota'></img>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div id='app' class="card-body">
+                            <p>
+                                <a class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1"
+                                    role="button" aria-expanded="false"
+                                    aria-controls="multiCollapseExample1">SEPTEMBER</a>
+                                <button class="btn btn-dark" type="button" data-toggle="collapse"
+                                    data-target="#multiCollapseExample2" aria-expanded="false"
+                                    aria-controls="multiCollapseExample2">OCTOBER</button>
+                            </p>
+                            <div class="row">
+                                <div class="col md-6">
+                                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                        <div class="card card-body">
+                                            <div class='table-responsive' id="allGames">
+                                                <table class='table table-hover' id='septGames'>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>SEPTEMBER</th>
+                                                            <th>Teams</th>
+                                                            <th>Location</th>
+                                                            <th>Times</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr id='juego1' v-on:click="gametable('U1 v U4')">
+                                                            <td rowspan=2>9/01</td>
+                                                            <td>U1 and U4</td>
+                                                            <td>AJ Katzenmaier</td>
+                                                            <td>9:30 a.m</td>
+                                                            <td><a href='https://goo.gl/maps/sy3zAuvzTpyQ8FXT7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego2' v-on:click="gametable('U3 v U2')">
+                                                            <td>U3 and U2 </td>
+                                                            <td>Greenbay</td>
+                                                            <td>01:00pm</td>
+                                                            <td><a href='https://goo.gl/maps/XF1G5MUKhJQFjsoV7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego3' v-on:click="gametable('U5 v U6')">
+                                                            <td rowspan=2> 9/08 </td>
+                                                            <td>U5 and U6</td>
+                                                            <td>Howard a Yeager</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/s8QYd17foJMwZAgo7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego4' v-on:click="gametable('U6 v U1')">
+                                                            <td>U6 and U1</td>
+                                                            <td>Marjorie P Hart</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/7f4vGBHwb2bNuDRb6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego5' v-on:click="gametable('U2 v U4')">
+                                                            <td rowspan=2> 9/15</td>
+                                                            <td>U2 and U4</td>
+                                                            <td>North</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/twsPpApXXpsEVA8Q6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego6' v-on:click="gametable('U3 v U5')">
+                                                            <td>U3 and U5</td>
+                                                            <td>AJ katzenmaier</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/sy3zAuvzTpyQ8FXT7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        <tr id='juego7' v-on:click="gametable('U1 v U3')">
+                                                            <td rowspan=2> 9/22</td>
+                                                            <td>U1 and U3</td>
+                                                            <td>South</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/9udvinWYiajkG2BT6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        <tr id='juego8' v-on:click="gametable('U2 v U6')">
+                                                            <td>U2 and U6</td>
+                                                            <td>Howard a Yaeger</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/s8QYd17foJMwZAgo7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego9' v-on:click="gametable('U4 v U5')">
+                                                            <td>9/29</td>
+                                                            <td>U4 and U5</td>
+                                                            <td>Greenbay</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/XF1G5MUKhJQFjsoV7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="btn btn-dark" type="button"
+                                                                    v-on:click="showHide">DETAILED INFO</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class='row'>
+                                                    <div v-if='mostrar' class="table-responsive">
+                                                        <table class='table table-hover'>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="3">All games take place on Saturday.
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Game date/hour</th>
+                                                                    <th>Team</th>
+                                                                    <th>Location</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>{{juegoSeleccionado.horario}}</td><br>
+                                                                    <td>{{juegoSeleccionado.id}}</td>
+                                                                    <td>{{juegoSeleccionado.ubicacion}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><iframe frameBorder='0' width="380" height="181"
+                                                                            :src="juegoSeleccionado.mapa"></iframe>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="3">
+                                                                        <p> Facility Type: Outdoor<br>
+                                                                            Aditional Information: If deemed necessary
+                                                                            by
+                                                                            NYSL,
+                                                                            games
+                                                                            may be shortened or canceled due to extreme
+                                                                            weather
+                                                                            conditions<br>
+                                                                            Please direct all questions to: Michael
+                                                                            Randall,
+                                                                            League
+                                                                            coordinator
+                                                                            PHONE:(630) 690-8132
+                                                                            <a id="mail"
+                                                                                href="mailtomichael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col md-6">
+                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                        <div class="card card-body">
+                                            <div class="table-responsive">
+                                                <table class='table table-hover' id='octGames'>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>OCTOBER</th>
+                                                            <th>Teams</th>
+                                                            <th>Location</th>
+                                                            <th>Times</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr id='juego10' v-on:click="gametable('U2 v U5')">
+                                                            <td rowspan=2>10/06</td>
+                                                            <td>U2 and U5</td>
+                                                            <td>Majorie P Hart</td>
+                                                            <td>9:30 a.m</td>
+                                                            <td><a target="_blank"
+                                                                    href='https://goo.gl/maps/7f4vGBHwb2bNuDRb6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego11' v-on:click="gametable('U1 v U6')">
+                                                            <td>U1 and U6</td>
+                                                            <td>South</td>
+                                                            <td>01:00pm</td>
+                                                            <td><a target="_blank"
+                                                                    href='https://goo.gl/maps/9udvinWYiajkG2BT6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego12' v-on:click="gametable('U3 v U4')">
+                                                            <td rowspan=2>10/13</td>
+                                                            <td>U3 and U4</td>
+                                                            <td>Howard A Yeager</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/s8QYd17foJMwZAgo7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego13' v-on:click="gametable('U5 v U1')">
+                                                            <td>U5 and U1</td>
+                                                            <td>Greenbay</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/XF1G5MUKhJQFjsoV7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego14' v-on:click="gametable('U6 v U3')">
+                                                            <td rowspan=2>10/20</td>
+                                                            <td>U6 and U3</td>
+                                                            <td>North</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/twsPpApXXpsEVA8Q6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id='juego15' v-on:click="gametable('U2 v U4')">
+                                                            <td>U2 and U4</td>
+                                                            <td>Majorie p Hart</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/7f4vGBHwb2bNuDRb6'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        <tr id='juego16' v-on:click="gametable('U3 v U1')">
+                                                            <td rowspan=2> 10/27</td>
+                                                            <td>U3 and U1</td>
+                                                            <td>AJ Katzenmaier</td>
+                                                            <td>9:30 am</td>
+                                                            <td><a href='https://goo.gl/maps/sy3zAuvzTpyQ8FXT7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        <tr id='juego17' v-on:click="gametable('U5 v U6')">
+                                                            <td>U5 and U6</td>
+                                                            <td>Howard a Yaeger</td>
+                                                            <td>1:00 pm</td>
+                                                            <td><a href='https://goo.gl/maps/s8QYd17foJMwZAgo7'><img
+                                                                        id='location'
+                                                                        src="Imagenes/pngfuel.com.png"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="btn btn-dark" type="button"
+                                                                    v-on:click="showHide">DETAILED INFO</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div v-if='mostrar' class="table-responsive">
+                                                <table class='table table-hover'>
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="3">All games take place on Saturday.</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Game date/hour</th>
+                                                            <th>Team</th>
+                                                            <th>Location</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>{{juegoSeleccionado.horario}}</td><br>
+                                                            <td>{{juegoSeleccionado.id}}</td>
+                                                            <td>{{juegoSeleccionado.ubicacion}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><iframe frameBorder='0' width="380" height="181"
+                                                                    :src="juegoSeleccionado.mapa"></iframe>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <p> Facility Type: Outdoor<br>
+                                                                    Aditional Information: If deemed necessary by NYSL,
+                                                                    games
+                                                                    may be shortened or canceled due to extreme weather
+                                                                    conditions<br>
+                                                                    Please direct all questions to: Michael Randall,
+                                                                    League
+                                                                    coordinator
+                                                                    PHONE:(630) 690-8132
+                                                                    <a id="mail"
+                                                                        href="mailtomichael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <b>Contact</b><img src="Imagenes/Pelota.png" id='pelota'></img>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class='row'>
+                            <div class='col-6'>
+                                <p>Phone:(690)-8132</p>
+                            </div>
+                            <div class='col-6'>
+                                <p>Email:<a id="mail"
+                                        href="mailtomichael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
+                                </p>
+                            </div>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src='dataJuegos.js'></script>
+<script src='table-games.js'></script>
+<script src='main.js'></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD42LXUmAUxQjIa6PUEzxOSnj9zWfRzP14",
+        authDomain: "nysl-bruno.firebaseapp.com",
+        databaseURL: "https://nysl-bruno.firebaseio.com",
+        projectId: "nysl-bruno",
+        storageBucket: "nysl-bruno.appspot.com",
+        messagingSenderId: "162180804073",
+        appId: "1:162180804073:web:0446160eb908655002af78",
+        measurementId: "G-GL3S29085H"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+
+</html>
